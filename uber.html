@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         class Uber{
+            constructor(distance,vehicletype,rate){
+                this.distance= distance;
+                this.vehicletype=vehicletype;
+                this.rate=rate;
+            }
+    setDistance(dist){
+                this.distance=dist;
+            }
+    getRideDetails(){
+                return(`The distance of the ride is ${this.distance}km with Vehicle type of ${this.vehicletype} and rate of per Kilometer is ${this.rate}rs`)
+            }
+    getRate(){
+                let totalRate = (this.distance * this.rate)
+                return (`The vehicle type is ${this.vehicletype} and rate is`+ totalRate);
+            }
+        }
+    let customer1= new Uber (100,"bike",15)
+    console.log(customer1.getRideDetails());
+    console.log(customer1.getRate());
+    </script>
+</body>
+</html>
